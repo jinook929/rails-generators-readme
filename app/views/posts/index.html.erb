@@ -1,3 +1,9 @@
+<h1>Posts</h1>
+
+<h3><%= link_to "New Post", new_post_path %></h3>
+
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post %> - <%= post.description %></div>
 <% end %>
+
+<%= link_to "to Home", "/" %>
